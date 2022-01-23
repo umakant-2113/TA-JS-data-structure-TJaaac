@@ -42,22 +42,22 @@ character.great = function (charactaerName, title) {
 character.great();
 
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
-let age = +prompt(`enter the age`);
-character.isAdult = age > 18 ? true : false;
+
+character.isAdult = character_Age > 18 ? true : false;
 
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
-changeIsAdult = +prompt(`enter the age`);
-changeIsAdult = !(changeIsAdult > 18) ? true : false;
+
+changeIsAdult = !(character_Age > 18) ? true : false;
 
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = "playedBy";
-charecter.keyName = "Maisie Williams";
+charecter[keyName] = "Maisie Williams";
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 alert(`${charecter.keyName}`);
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
-
+console.log(character[42]);
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
 charecter.totalSeasons = 1 + 2 + 3 + 2;
 // - Access the value of the key `totalSeason` (it should be 8)
