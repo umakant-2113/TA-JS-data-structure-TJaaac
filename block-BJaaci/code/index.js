@@ -128,9 +128,31 @@ for (let titles of movies) {
   }
 }
 // 27. Log the name of all the movies with more than 1 genres
-
+function gen(x, y) {
+  if (movies[0].genres > 1) {
+    return true;
+  } else if (movies[1].genres > 1) {
+    return true;
+  } else if (movies[2].genres > 1) {
+    return true;
+  }
+}
+gen(x, y);
 // 28. Log the name of all the movies with more than 1 actors
-
+for (let titles of movies) {
+  for (let actor of titles.genres) {
+    console.log(actor);
+  }
+}
 // 29. Log the name of all the movies with exactly 3 actors
-
+for (let titles of movies) {
+  for (let actor of titles.genres) {
+    console.log(actor);
+  }
+}
 // 30. Log the name of all the movies with year `2018`
+for (let titles of movies) {
+  for (let actor of titles.genres) {
+    console.log(actor);
+  }
+}
