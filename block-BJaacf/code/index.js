@@ -18,8 +18,14 @@ for (let number of numbers) {
 console.log(sum / 5);
 
 // 4. Find the highest number in the array and print it to the console using console.log()
+const numberArr = [23, 122, 1, 23, 4, 56];
+const highest = Math.max(...numberArr);
+console.log("Highest Number: " + highest);
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
+const numberArr = [23, 122, 1, 23, 4, 56];
+const lowest = Math.min(...numberArr);
+console.log("lowest Number: " + lowest);
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
 let even = [];
@@ -56,3 +62,12 @@ for (let number of numbers) {
 }
 
 // 10. Find all the number in the array that is divisible by 3
+
+let divisivle = [];
+let numbers = [5, 7, 10, 12, 15];
+for (let number of numbers) {
+  if (number % 3 === 0) {
+    divisivle.push(number);
+  }
+}
+console.log(divisivle);
