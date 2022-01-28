@@ -2,84 +2,116 @@
 
 ```js
 const person = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
 };
 
 let person2 = person;
 
-person.firstName = 'Arya';
+person.firstName = "Arya";
 
-console.log(person2.firstName); // output
+console.log(person2.firstName); // output ""
+("arya");
 console.log(person.firstName); // output
+("arya");
 console.log(person.lastName); // output
+("doe");
 console.log(person == person2); // output
+true;
 console.log(person === person2); // output
+true;
 console.log(person.lastName === person2.lastName); // output
+true;
 ```
 
 2. Write the output with reason:
 
 ```js
 let person = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
   address: {
-    street: 'North 1st',
-    city: 'San Jose',
-    state: 'CA',
-    country: 'USA',
+    street: "North 1st",
+    city: "San Jose",
+    state: "CA",
+    country: "USA",
   },
 };
 
 let personTwo = { ...person };
 
-person.firstName = 'Arya';
-person.city = 'Navada';
+person.firstName = "Arya";
+person.city = "Navada";
 
 console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
+("john");
+console.log(person.firstName); //
+("arya");
 console.log(personTwo.lastName); // output
+("Doe");
 console.log(person.firstName === personTwo.firstName); // output
+false;
 console.log(person == personTwo); // output
+false;
 console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
+false;
+console.log(person.address === personTwo.address);
+treu;
 console.log(person.address == personTwo.address); // output
 console.log(personTwo.address.city); // output
+("San Jose");
 console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+("San Jose");
+console.log(person.address.city == personTwo.address.city);
+true;
+// output
 ```
 
 3. Write the output with reason:
 
 ```js
 let person = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
   address: {
-    street: 'North 1st',
-    city: 'San Jose',
-    state: 'CA',
-    country: 'USA',
+    street: "North 1st",
+    city: "San Jose",
+    state: "CA",
+    country: "USA",
   },
 };
 
 let personTwo = { ...person, address: { ...person.address } };
 
-person.firstName = 'Arya';
-person.city = 'Navada';
+person.firstName = "Arya";
+person.city = "Navada";
 
-console.log(personTwo.firstName); // output
+console.log(personTwo.firstName);
+out put "John"
+
 console.log(person.firstName); // output
+"Arya"
 console.log(personTwo.lastName); // output
+"Doe"
 console.log(person.firstName === personTwo.firstName); // output
+
+false
 console.log(person == personTwo); // output
+false
 console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
+false
+console.log(person.address === personTwo.address); //
+true
 console.log(person.address == personTwo.address); // output
+true
 console.log(personTwo.address.city); // output
+"San Jose"
 console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+"San Jose"
+console.log(person.address.city == personTwo.address.
+city);
+true
+ // output
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -88,21 +120,22 @@ console.log(person.address.city == personTwo.address.city); // output
 let blogs = [
   {
     id: 1,
-    title: 'Post #1',
-    body: 'My first blog post',
+    title: "Post #1",
+    body: "My first blog post",
   },
   {
     id: 2,
-    title: 'Post #2',
-    body: 'My second blog post',
+    title: "Post #2",
+    body: "My second blog post",
   },
   {
     id: 3,
-    title: 'Post #3',
-    body: 'My third blog post',
+    title: "Post #3",
+    body: "My third blog post",
   },
 ];
-
+let cloneBlogs = [...blogs];
+console.log(cloneBlogs);
 // Your code goes here
 ```
 
@@ -111,23 +144,24 @@ let blogs = [
 ```js
 var questions = [
   {
-    prompt: 'Why is the sky blue?',
+    prompt: "Why is the sky blue?",
     responses: [
-      'Because the color blue was on sale at Wallmart',
-      'Because blue is the prettiest color',
-      'Because the air molecules difract blue light more than any other color',
+      "Because the color blue was on sale at Wallmart",
+      "Because blue is the prettiest color",
+      "Because the air molecules difract blue light more than any other color",
     ],
   },
   {
-    prompt: 'Why are leaves usually green?',
+    prompt: "Why are leaves usually green?",
     responses: [
-      'So green caterpillars can hide better.',
-      'Because leaves can more easily make energy with green light',
+      "So green caterpillars can hide better.",
+      "Because leaves can more easily make energy with green light",
       "Because leaves absorb red and blue light so it's green that is reflected",
     ],
   },
 ];
-
+let questionClone = [...questions];
+console.log(questionClone);
 // Your code goes here
 ```
 
@@ -136,54 +170,56 @@ var questions = [
 ```js
 var allBlogs = {
   id: 1,
-  title: 'Alamofire JSON Serialization',
-  body: 'All about serialization in Alamofire...',
+  title: "Alamofire JSON Serialization",
+  body: "All about serialization in Alamofire...",
   author: {
     id: 1,
-    fullName: 'Jeff Potter',
-    username: 'jpotts18',
+    fullName: "Jeff Potter",
+    username: "jpotts18",
   },
   comments: [
     {
       id: 1,
-      body: 'Thanks for the help Jeff, this saved me hours',
+      body: "Thanks for the help Jeff, this saved me hours",
     },
     {
       id: 2,
-      body: 'Your welcome. I am happy to help!',
+      body: "Your welcome. I am happy to help!",
     },
   ],
 };
 
 // Your code goes here
 ```
+let allBlogClone = {...allBlogs,...author, ...comments};
+console.log(allBlogClone);
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
 
 ```js
 let person = [
   {
-    input: { name: 'Ryan' },
-    output: { name: 'Ryan' },
+    input: { name: "Ryan" },
+    output: { name: "Ryan" },
   },
   {
-    input: { name: { first: 'Ryan', last: 'Haskell-Glatz' } },
-    output: { firstName: 'Ryan', lastName: 'Haskell-Glatz' },
+    input: { name: { first: "Ryan", last: "Haskell-Glatz" } },
+    output: { firstName: "Ryan", lastName: "Haskell-Glatz" },
   },
   {
-    input: { name: 'Ryan', age: 24 },
-    output: { name: 'Ryan', age: 24 },
+    input: { name: "Ryan", age: 24 },
+    output: { name: "Ryan", age: 24 },
   },
   {
     input: {
-      name: { first: 'Ryan', last: 'Haskell-Glatz' },
-      birthday: { year: 1993, month: 'Nov' },
+      name: { first: "Ryan", last: "Haskell-Glatz" },
+      birthday: { year: 1993, month: "Nov" },
     },
     output: {
-      firstName: 'Ryan',
-      lastName: 'Haskell-Glatz',
+      firstName: "Ryan",
+      lastName: "Haskell-Glatz",
       birthdayYear: 1993,
-      birthdayMonth: 'Nov',
+      birthdayMonth: "Nov",
     },
   },
 ];
@@ -201,20 +237,20 @@ function cloneObject() {
 // Run the test below to check your function
 
 let user = {
-  name: 'John',
-  house: 'Stark',
-  sisters: ['Arya', 'Sansa'],
+  name: "John",
+  house: "Stark",
+  sisters: ["Arya", "Sansa"],
 };
 let cloned = cloneObject(user);
 
 let person = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
   address: {
-    street: 'North 1st',
-    city: 'San Jose',
-    state: 'CA',
-    country: 'USA',
+    street: "North 1st",
+    city: "San Jose",
+    state: "CA",
+    country: "USA",
   },
 };
 
